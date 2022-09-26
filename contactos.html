@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style1.css">
     
+    
 </head>
 <body>
     <header>
             <div class="box">
-                    <h1><img src="logos/logo.png" class="img-logo"></h1>
+                    <h1><img src="logos/logo.png" class="img-logo" alt="Logo de la Barbería Alura"></h1>
                     <h1 class="nombre-logo">anderson</h1>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="productos/index.html">Producto</a></li>
+                        <li><a href="pruductos.html">Inicio</a></li>
+                        <li><a href="index.html">Producto</a></li>
                         <li><a href="contactos.html">Contacto</a></li>
                     </ul>
                 </nav>
@@ -25,32 +26,80 @@
         
     </header>
 
-    <main>
-        <ul class="producto">
-            <li>
-                <h2>Correo Electronico</h2>
-                <img src="logos/correo.png" class="img-icono">
-                <p class="descripcion">BarberiaAnderson@hotmail.com</p>
-            </li>
-            <li>
-                <h2>WhatsApp</h2>
-                <img src="logos/whatsapp.png" class="img-icono">
-                <p class="descripcion">809-668-0898</p>
+    <main class="registro_main">
+       <form action="">
+            <label for="Nombre_Apellido">Nombre y Apellido</label>
+            <input type="text" id="Nombre_Apellido" class="input_principal" required>
+
+            <label for="Correo_Electronico">Correo Electronico</label>
+            <input type="email" id="Correo_Electronico" class="input_principal" placeholder="email@dominio.com" required>
+
+            <label for="Telefono">Telefono</label>
+            <input type="tel" id="Telefono" class="input_principal" placeholder="(xxx) xxx xxxx" required>
+
+            <label for="Mensaje">Mensaje</label>
+            <Textarea cols="68" rows="12" class="input_principal" placeholder="Escribir..." required></Textarea>
+
+            
+
+            <div>
+                <legend>Como le gustaria que lo contactaramos?</legend>
+
+                <label for="radio_correo"><input type="radio" id="radio_correo" name="igual" value="Correo Electronico"> Correo Electronico</label>
                 
-            </li>
-            <li>
-                <h2>Redes Sociales</h2>
-                <img src="logos/redes.png" class="img-icono2">
-                <p class="descripcion">Instragran: @BarberiaAnderson</p>
-                <p>---------------------------------------</p>
-                <p class="descripcion">Facebook: @Barberia_Anderson</p>
+                <label for="radio_telefono"><input type="radio" id="radio_telefono" name="igual" value="Telefono"> Telefono</label>
                 
-            </li>
-        </ul>  
+                <label for="radio_whatsapp"><input type="radio" id="radio_whatsapp" name="igual" value="Whatsapp" checked> Whatsapp</label>    
+            </div>
+
+            
+
+            <div>
+                <legend>En que horario quieres ser atendido?</legend> 
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </div>
+
+            
+                <label for="CheckBox"><input type="checkbox" id="CheckBox" class="checkbox" checked> Le gustaria recibir novedades sobre ofertas y dias no laborales?</label>
+
+
+            <input type="submit" value="Enviar Datos" class="enviar">
+       </form>
+
+        <table>
+            <thead>
+                    <th>Dia</th>
+                    <th>Horario</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>8AM - 9PM</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>8AM - 9PM</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>8AM - 6PM</td>
+                </tr>
+            </tbody>
+            
+            
+        </table>
+
+
+
     </main>
 
     <footer>
-        <img src="logos/logo-blanco.png" alt="">
+        <img src="logos/logo-blanco.png" alt="Logo de la Barbería Alura">
         <p>@Copyright Barberia Anderson 2022</p>
         
     </footer>
