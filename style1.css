@@ -223,6 +223,13 @@ td,th{
     margin: 1em;
 }
 
+.items::before{
+    content: "✔";
+    margin-right: 10px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: green;
+}
 
 .mapa{
     padding: 2em 0;
@@ -245,7 +252,7 @@ td,th{
     margin: 0 auto;
 }
 
-.items:first-child{
+.items:nth-child(1n){
     font-weight: bold;
 }
 
@@ -270,3 +277,36 @@ td,th{
     margin: 1em auto;
     
 }
+
+
+@media screen and (max-width: 480px) {
+
+    .box, .principal, .mapa_contenido, .contenido_diferenciales, .video{
+        width: auto;
+    }
+    
+}
+
+
+
+/*
+
+<meta name="viewport" content="width=device-width">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video {
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
+*/
